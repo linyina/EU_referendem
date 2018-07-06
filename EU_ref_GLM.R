@@ -1,7 +1,7 @@
 ############################################################################################
-#                               This is for STAT7001 ICA2                                  # 
+#                               This is for STATxxxx ICA2                                  # 
 #   This code is for analysing the EU referendum on 23rd June 2016
-#   The data was from BBC's artical written by  by Martin Rosenbaum,  the BBC¡¯s Freedom of
+#   The data was from BBC's artical written by  by Martin Rosenbaum,  the BBCÂ¡Â¯s Freedom of
 #   Information specialist
 #   Article at http://www.bbc.co.uk/news/uk-politics-38762034
 #
@@ -225,7 +225,7 @@ xyplot(LeaveProp ~ NoQuals | RegionName, col=reg.colours[as.numeric(AreaType2)],
        qualifications versus LeaveVotes Proportion for different regions")
 xyplot(LeaveProp ~ L1Quals | RegionName, col=reg.colours[as.numeric(AreaType2)],
        xlab="Proportion of GCSE Level People",ylab="Proportion of Leave Votes",
-       main="% of permanent residents with only ¡®Level 1¡¯ qualifi-
+       main="% of permanent residents with only Â¡Â®Level 1Â¡Â¯ qualifi-
        cations versus LeaveVotes Proportion for different regions")
 xyplot(LeaveProp ~ L4Quals_plus | RegionName, col=reg.colours[as.numeric(AreaType2)],
        xlab="Proportion of Degree Level People",ylab="Proportion of Leave Votes",
@@ -242,10 +242,10 @@ plot(LeaveProp~ HigherOccup, col=reg.colours[as.numeric(RegionName)])
 lines(lowess(HigherOccup, LeaveProp), col="red")
 xyplot(LeaveProp ~ HigherOccup | RegionName, col=reg.colours[as.numeric(AreaType2)],
        xlab="Proportion of Higher Occupation People",ylab="Proportion of Leave Votes",
-       main="% of permanent residents in ¡®higher-level¡¯ occupations versus LeaveVotes Proportion for different regions")
+       main="% of permanent residents in Â¡Â®higher-levelÂ¡Â¯ occupations versus LeaveVotes Proportion for different regions")
 xyplot(LeaveProp ~ RoutineOccupOrLTU | RegionName, col=reg.colours[as.numeric(AreaType2)],
        xlab="Proportion of Routine or LTU People",ylab="Proportion of Leave Votes",
-       main="% of permanent residents in ¡®routine¡¯ occupations or long-term non-employed for different regions")
+       main="% of permanent residents in Â¡Â®routineÂ¡Â¯ occupations or long-term non-employed for different regions")
 
 #### vii. Deprivation
 summary(Dep.clean)
@@ -255,10 +255,10 @@ points(mean.dep, col="red", pch=15)
 cor(LeaveProp,Dep.clean, method = "spearman")
 
 xyplot(LeaveProp ~ Deprived | AreaType2, col=reg.colours[as.numeric(RegionName)],
-       xlab="% of households that are ¡®deprived' in 1 dim",ylab="Proportion of Leave Votes",
+       xlab="% of households that are Â¡Â®deprived' in 1 dim",ylab="Proportion of Leave Votes",
        main="Deprivation versus LeaveVotes Proportion for different regions")
 xyplot(LeaveProp ~ MultiDepriv | AreaType2, col=reg.colours[as.numeric(RegionName)],
-       xlab="% of households that are ¡®deprived¡¯ in 2+ dim",ylab="Proportion of Leave Votes",
+       xlab="% of households that are Â¡Â®deprivedÂ¡Â¯ in 2+ dim",ylab="Proportion of Leave Votes",
        main="Deprivation versus LeaveVotes Proportion for different regions")
 
 #### viii. Social grades
@@ -747,7 +747,7 @@ dev.off()
 # Check for residual pattern within groups and difference between groups      
 jpeg("final_model_region.jpg", height=480, width=480)
 xyplot(residuals(Ref.fin) ~ fitted(Ref.fin) | RegionName, 
-       main = "glm.fin ¨C final model by plot",
+       main = "glm.fin Â¨C final model by plot",
        panel=function(x, y){ 
          panel.xyplot(x, y) 
          panel.loess(x, y, span = 0.75) 
